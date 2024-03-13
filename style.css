@@ -11,6 +11,9 @@ body{
     font-family: 'mulishregular';
     font-weight:500;
 }
+span{
+    font-family: 'taviraj';
+}
 .container-custom{
     padding-left:24px;
     padding-right:24px;
@@ -175,7 +178,7 @@ section{
     color: #d5b55d;
     font-size: 48px;
 }
-.btn{
+.btn-custom-btn{
     background-color: #d5b55d;
     padding: 12px 40px;
 }
@@ -219,20 +222,22 @@ section{
     color: #d5b55d;
 }
 
-.btn {
+.btn-custom-btn{
   border-radius: 3px;
   max-width: 310px;
   width: 100%;
   display: block;
-  padding: 20px ;
   background: linear-gradient(to right, black 50%,  #d5b55d 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .7s ease-out;
   text-decoration: none;
+  padding: 15px 38px 15px 38px;
+  font-size: 14px;
+  border:none;
 }
 
-.btn:hover{
+.btn-custom-btn:hover{
   background-position: left bottom;
 }
 
@@ -245,7 +250,7 @@ section{
   transition: all .6s ease-out;
   display: block;
 }
-.btn:hover .text{
+.btn-custom-btn:hover .text{
     color: white; 
 }
 
@@ -596,16 +601,7 @@ section{
     font-size:20px!important;
 }
 
-.btn{
-    position: relative;
-    background-color: #d7b65d;
-    padding: 15px 38px 15px 38px;
-    border: 1px solid #d7b65d;
-    font-size: 14px;
-    transition: 0.6s;
-    border-radius: 0px;
-    color: #192026;
-}
+
 .btn-2::before {
     background-color: #192026;
     transition: 0.3s ease-out;
@@ -730,9 +726,33 @@ section{
    .luxery-btn:hover{
     color: white;
    }
+   .custom-margin{
+    margin-top:80px;
+   }
+   .input-group-custom{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: stretch; */
+    width: 100%;
+   }
+   .input-group-custom input{
+     padding:15px 20px;
+     padding: 15px 94px 15px 24px;
+   }
+   .header .offcanvas{
+    background-color: #000;
+   }
+   .header .btn-close{
+   background-image: url('img/x.png')!important;
+   background-size:35px;
+   }
 
 
 @media screen and (max-width: 767px) {
+    section{
+        padding:60px 0;
+    }
     .design h1 {
       font-size:2rem;
       text-align: center;
@@ -745,8 +765,125 @@ section{
     }
     .navbar-toggler-icon{
       background-image: url('img/align-justify\ \(1\).png');
+    } 
+    /* .img-radius {
+        margin-top:-70px;
+    } */
+    .luxery-btn{
+        max-width: 187px;
+        margin: 0 auto;
     }
-    
-  }
+    .lte-btn-wrap{
+        padding:20px;
+    }
+    .lte-layout-car{
+        max-width:263px;
+    }
+    .transfersheet, .content{
+        top:0;
+    }
+    .transfersheet{
+        padding:0 0 50px;
+    }
+    .container-custom{
+        padding-left:13px;
+        padding-right:13px;
+    }
+    .lte-wrapper{
+       border-right:none;
+    }
+    .custom-margin{
+        margin-top:20px;
+    }
+    .lte-custom{
+        max-width: 330px;
+    }
+    .form-custom{
+        margin-top: 0;
+        padding:55px 20px;
+    }
+    .maximum-comfort .lte-header{
+        font-size: 40px;
+    }
+    .web-heading{
+      top:-61px;
+    }
+    .lte-heading-content-heading{
+       margin-top: 90px;
+       position: relative;
+       left: -50px;
+    }
+    .blog-custom-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .date-container {
+      top: 39px;
+    }
+    .lte-social-icons-list li:nth-child(4){
+        margin-left:0;
+    }
+    .lte-social-icons-list li:nth-child(2){
+        margin-left: 0;
+    }
+    .widget_lte{
+        margin-top:20px;
+    }
+    .form-footer{
+        left:36px;
+    }
+    .input-footer-custom{
+        width:100%;
+        margin:0 auto;
+    }
+    .lte-btn-footer .btn-main{
+        width: 100%;
+        margin:0 auto;
+    }
+    .lte-btn-footer{
+        width:100%;
+    }
+    .input-group-custom input{
+        padding:15px 20px;
+      }
+      .btn-primary{
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+      }
+      .btn-check:focus+.btn-primary, .btn-primary:focus{
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+      }
+      .mobile-navigation a{
+        text-decoration: none;
+      }
+       .mobile-navigation{
+        list-style: none;
+       }
+      .mobile-navigation::after{
+        position: absolute;
+        content: '\f067';
+        font-family:fontAwesome;
+        right: 0;
+        top:1px;
+        color:#fff;
+        font-size:30px;
+      }
+      .header .offcanvas-body ul{
+        padding-inline-start: 0;
+      }
+      .design{
+        left: 50px;
+      }
+      .transfer{
+        padding:0 0 140px;
+    }
+    .img-radius{
+        margin-top:60px;
+    }
+}
+
 
   

@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- -----header start----- -->
+   <!-- -----header start----- -->
 <div class="overlay position-relative">
     <header class="header position-relative">
         <div class="container py-2 container-custom">
@@ -19,9 +19,39 @@
                     <a class="navbar-brand" href="#">
                         <img src="img/logo_1x_white.png" class="img-fluid">
                     </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+                  <button class="btn btn-primary d-md-none d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span class="navbar-toggler-icon"></span></button>
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                      <a href="#" id="offcanvasRightLabel" class="my-0 mx-auto">
+                        <img src="img/logo_1x_white.png" class="img-fluid">
+                      </a>
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="">
+                        <li class="position-relative mobile-navigation py-2">
+                            <a href="#" class="fs-2">
+                                Home
+                            </a>
+                        </li>
+                        <li class="position-relative mobile-navigation py-2">
+                            <a href="#" class="fs-2">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="position-relative mobile-navigation py-2">
+                            <a href="#" class="fs-2">
+                                Product
+                            </a>
+                        </li>
+                        <li class="position-relative mobile-navigation py-2">
+                            <a href="#" class="fs-2">
+                                Contact
+                            </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                     <div class="collapse navbar-collapse justify-content-around ms-4" id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item ps-3 dropdown-header-hover">
@@ -54,11 +84,11 @@
                             <li class="nav-item ps-3 fw-bold">
                             <a class="nav-link" aria-current="page" href="#">BLOG<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></a>
                             </li>
-                            <li class="nav-item ps-4 fw-bold">
+                            <li class="nav-item ps-3 fw-bold">
                             <a class="nav-link" aria-current="page" href="#">CONTACT</a>
                             </li>
                         </ul>
-                        <div class="d-flex align-items-center header-lte-icon d-none d-md-block">
+                        <div class="align-items-center header-lte-icon d-none d-md-flex">
                             <div class="lte-navbar-icons d-flex align-items-center justify-content-center me-2">
                                 <i class="fa-brands fa-whatsapp "></i>
                             </div>
@@ -84,11 +114,11 @@
                     <h1 class="mb-2">Design<br><span>With Technology</span></h1>
                 <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic">a limousion for everyone</span>
                 </div>
-                <div class="dots-container d-flex d-md-block">
-                    <div class="dot mb-5"></div>
-                    <div class="dot mb-5"></div>
-                    <div class="dot mb-5"></div>
-                    <div class="dot mb-5"></div>
+                <div class="dots-container d-flex d-md-block py-4 py-md-0">
+                    <div class="dot mb-5 me-5 me-md-0"></div>
+                    <div class="dot mb-5 me-5 me-md-0"></div>
+                    <div class="dot mb-5 me-5 me-md-0"></div>
+                    <div class="dot mb-5 me-5 me-md-0"></div>
                 </div>
             </div>
         </div>
@@ -100,31 +130,31 @@
     <section class="transfer">
        <div class="container container-custom">
             <div class="row">
-                <div class="col-md-4 col-12 my-4">
-                    <div class="img-radius d-block align-items-center d-md-flex text-md-start text-center">
+                <div class="col-md-4 col-12 mb-4 mb-md-0">
+                    <div class="img-radius d-block align-items-center d-md-flex text-md-start text-center mb-5 mb-md-0">
                         <img src="img/serv_01-110x110.jpeg" class="img-fluid">
-                        <div class="airpot ms-5">
-                            <h4>Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
-                            <p>Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
+                        <div class="airpot ms-0 my-4 ms-md-5 my-md-0">
+                            <h4 class="my-1 my-md-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
+                            <p class="my-2 my-md-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
                        </div>
                     </div> 
                 </div>
-                <div class="col-md-4 col-12 my-4">
-                    <div class="img-radius d-block align-items-center d-md-flex  text-md-start text-center">
+                <div class="col-md-4 col-12 mb-4 mb-md-0">
+                    <div class="img-radius d-block align-items-center d-md-flex text-md-start text-center mb-5 mb-md-0">
                         <img src="img/serv_01-110x110.jpeg" class="img-fluid">
-                        <div class="airpot ms-5">
-                            <h4>Business <br>Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
-                            <p>Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
-                    </div>
+                        <div class="airpot ms-0 my-4 ms-md-5 my-md-0">
+                            <h4 class="my-1 my-md-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
+                            <p class="my-2 my-md-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
+                       </div>
                     </div> 
                 </div>
-                <div class="col-md-4 col-12 my-4">
-                    <div class="img-radius d-block align-items-center d-md-flex text-center text-md-start">
+                <div class="col-md-4 col-12 mb-4 mb-md-0">
+                    <div class="img-radius d-block align-items-center d-md-flex text-md-start text-center mb-5 mb-md-0">
                         <img src="img/serv_01-110x110.jpeg" class="img-fluid">
-                        <div class="airpot ms-5">
-                            <h4>Events & <br> Wedding<i class="fa-solid fa-arrow-right ms-3"></i></h4>
-                            <p>Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
-                    </div>
+                        <div class="airpot ms-0 my-4 ms-md-5 my-md-0">
+                            <h4 class="my-1 my-md-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
+                            <p class="my-2 my-md-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
+                       </div>
                     </div> 
                 </div>
             </div>
@@ -138,13 +168,13 @@
             <div class="background-img">
                 <div class="row">
                     <div class="col-md-4">
-                        <h3 class="lte-header"><span> Luxury Cars </span><br>
+                        <h3 class="lte-header text-center text-md-start"><span> Luxury Cars </span><br>
                             for Maximum<br>Satisfaction
                         </h3>
-                        <p>Nullam sed ultricies erat, nec euismod metus. Morbi porttitor sapien vitae leo scelerisque. Nullam sed ultricies erat.</p>
-                        <button class="btn mt-4 luxery-btn">Read More</button>
+                        <p class="text-center text-md-start">Nullam sed ultricies erat, nec euismod metus. Morbi porttitor sapien vitae leo scelerisque. Nullam sed ultricies erat.</p>
+                        <button class="btn-custom-btn mt-5 luxery-btn">Read More</button>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 d-md-block d-none">
                         <img src="img/about-limmo.png" class="img-fluid">
                     </div>
                 </div>
@@ -164,12 +194,12 @@
                         </a>
                         <div class="lte-layout-car">
                             <h5 class="lte-header"> Cadillac Limousine XTS </h5>
-                            <p class="lte-excerpt mt-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
+                            <p class="lte-excerpt mt-2 mt-md-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
                         </div>
                         <ul class="lte-icons-tags d-flex">
                             <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>4 seats</li>
                             <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Diesel</li>
-                            <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Mechanic</li>
+                            <li class="nav-item  text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Mechanic</li>
                         </ul>
                         <div class="lte-rental-footer pb-4 d-flex align-items-center justify-content-between">
                             <div class="lte-price lte-price-bottom">260$ <span class="lte-price-postfix">/ per hour</span>
@@ -182,7 +212,7 @@
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
-                        <a href="#" class="btn">
+                        <a href="#" class="btn-custom-btn">
                             <span class="text">Get Limousine <i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                         </a>
                     </div>
@@ -193,11 +223,11 @@
                             <img src="img/car_02-800x532.jpeg" class="img-fluid">
                         </a>
                         <h5 class="lte-header"> Mercedes Benz E-Class </h5>
-                        <p class="lte-excerpt mt-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
+                        <p class="lte-excerpt  mt-2 mt-md-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
                         <ul class="lte-icons-tags d-flex">
                             <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>4 seats</li>
                             <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Diesel</li>
-                            <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Mechanic</li>
+                            <li class="nav-item text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Mechanic</li>
                         </ul>
                         <div class="lte-rental-footer pb-4 d-flex align-items-center justify-content-between">
                             <div class="lte-price lte-price-bottom">260$ <span class="lte-price-postfix">/ per hour</span>
@@ -210,7 +240,7 @@
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
-                        <a href="#" class="btn">
+                        <a href="#" class="btn-custom-btn">
                             <span class="text">Get Limousine <i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                         </a>
                     </div>
@@ -221,11 +251,11 @@
                             <img src="img/car_01-800x532.jpeg" class="img-fluid">
                         </a>
                         <h5 class="lte-header"> Range Rover Sport 5.5 </h5>
-                        <p class="lte-excerpt mt-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
+                        <p class="lte-excerpt  mt-2 mt-md-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
                         <ul class="lte-icons-tags d-flex">
                             <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>4 seats</li>
                             <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Diesel</li>
-                            <li class="nav-item me-3 text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Mechanic</li>
+                            <li class="nav-item  text-center"><i class="fa-solid fa-user d-block text-center mb-2"></i>Mechanic</li>
                         </ul>
                         <div class="lte-rental-footer pb-4 d-flex align-items-center justify-content-between">
                             <div class="lte-price lte-price-bottom">260$ <span class="lte-price-postfix">/ per hour</span>
@@ -238,7 +268,7 @@
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
-                        <a href="#" class="btn">
+                        <a href="#" class="btn-custom-btn">
                             <span class="text">Get Limousine <i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                         </a>
                 </div>
@@ -251,7 +281,7 @@
         <div class="container container-custom">
             <div class="contain-box">
                 <h5 class="text-center lte-header pt-5 pb-3">We value the time and quality of travel for each of our clients</h5>
-                <h2 class="text-center lte-heading-content py-3">Incredible <span class="d-block">comfort</span></h2>
+                <h2 class="text-center lte-heading-content py-3 mt-1 mb-5">Incredible <span class="d-block">comfort</span></h2>
                 <div class="img-car position-relative">
                     <img class="img-fluid" src="img/about-limmo-large.png">
                 </div>
@@ -267,50 +297,48 @@
      <section class="transfersheet position-relative">
       <div class="container container-custom">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 d-md-block d-none">
                 <div class="transfersheet-content">
                    <img src="img/about-chairs.png" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="lte-custom">
-                    <div class="lte-subcolor-main ms-4">
+                    <div class="lte-subcolor-main ms-0 ms-md-4 text-md-start text-center">
                         <h5>We make sure that <span>your every trip</span> is comfortable</h5>
                     </div>
                     <div class="row lte-re">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-6">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">Luxury Limousine Selection</span>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-6">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">27/7 Order Available</span>
                             </div>
                         </div>
-                        <div class="col-md-4 lte-wrap">
+                        <div class="col-md-4 lte-wrap col-6 mt-4 mt-md-0">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">Fast Car Delivery Service</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row lte-rew">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-6 custom-margin">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">High Safety and Nurity</span>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-6  custom-margin">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">Fixed Price & Bonus System</span>
                             </div>
                         </div>
-                        <div class="col-md-4 lte-wrap">
+                        <div class="col-md-4 lte-wrap col-6 custom-margin">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">Professional Car Drivers</span>
@@ -329,10 +357,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="lte-subcolor-main">
-                        <h5 class="text-black fs-1">Use our<span> quick booking form <br> </span> to get a limousine</h5>
-                        <p class="py-4">Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis, quam nulla vehicula felis, eu cursus sem tellus.
+                        <h5 class="text-black fs-1">Use our<span class="fs-1"> quick booking form <br> </span> to get a limousine</h5>
+                        <p class="py-4 text-center text-md-start">Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis, quam nulla vehicula felis, eu cursus sem tellus.
                         </p>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start">
                             <div class="lte-navbar-icons d-flex align-items-center justify-content-center me-2">
                                 <i class="fa-brands fa-whatsapp "></i>
                             </div>
@@ -340,12 +368,12 @@
                                 <span class="d-block text-black dd"> 8-800-10-500 </span>
                             </span>
                         </div>
-                        <h6 class="lte-header pt-5 pb-1">Download our Appllication to track your order</h6>
+                        <h6 class="lte-header pt-5 pb-1 text-center text-md-start">Download our Appllication to track your order</h6>
                         <div class="lte-heder-custom d-flex align-items-center pt-2 pb-3">
                             <div class="eleme-image">
                                 <img src="img/app-apple-2x.png">
                             </div>
-                            <div class="eleme-image ms-4">
+                            <div class="eleme-image ms-5 ms-md-3">
                                 <img src="img/app-google-2x.png">
                             </div>
                         </div>
@@ -362,15 +390,15 @@
                                         <input type="email" class="form-control py-4 px-5" id="exampleFormControlInput1" placeholder="Enter Location">
                                     </label>
                                 </div>
-                                <div class="col-6 mb-3">
-                                    <label class="position-relative ">
+                                <div class="col-md-6 col-12 mb-3">
+                                    <label class="position-relative device-width">
                                         <span class="position-absolute form-input">
-                                            <i class="fa-solid fa-calendar-days  fs-5 vertically-middle"></i>
+                                            <i class="fa-solid fa-calendar-days vertically-middle"></i>
                                         </span>
                                             <input type="email" class="form-control py-4 px-5" id="exampleFormControlInput1" placeholder="Order Date">
                                         </label>
                                 </div>
-                                <div class="col-6 mb-3">
+                                <div class="col-md-6 col-12 mb-3">
                                     <label class="position-relative device-width">
                                         <span class="position-absolute form-input">
                                             <i class="fa-solid fa-clock fs-5 vertically-middle"></i>
@@ -420,16 +448,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="vip-content d-flex align-items-center justify-content-between">
+                    <div class="vip-content d-flex align-items-center justify-content-md-between justify-content-start">
                         <div class="lte-heading-content web-heading">
                             <h2 class="lte-header fs-1">15%</h2>
                         </div>
                         <div class="lte-heading-content-heading">
-                            <h2 class="lte-header fs-4">  Get a <span class="text-white">client club card </span>and enjoy a discount on next trips</h2>
+                            <h2 class="lte-header fs-2 pt-4">  Get a <span class="text-white">client club card </span>and enjoy a discount on next trips</h2>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 position-relative">
+                <div class="col-md-6 position-relative d-md-block d-none">
                     <div class="img-dicount position-absolute ">
                         <img src="img/discount-card.png">
                     </div>
@@ -627,7 +655,7 @@
                 </div>
             <div class="text-center">
 
-                   <a href="#" class="btn blog-btn">
+                   <a href="#" class="btn-custom-btn blog-btn">
                             <span class="text">Read More<i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                      </a>
             </div>
@@ -676,31 +704,29 @@
       <footer class="footer position-relative">
         <div class="container">
             <div class="row hr-tag">
-                <div class="col-md-6 d-flex justify-content-end ps-custom pb-2">
+                <div class="col-md-6 d-flex justify-content-end ps-custom pb-2 d-md-block d-none">
                     <div class="footer-heading pt-4">
                         <h6 class="lte-header fs-5 pt-5">Want to know about our offers first?</h6>
                         <h4 class="lte-header pb-5 text-white fs-font">Subscribe our newsletter</h4>
                     </div>
                 </div>
-                <div class="col-md-6 position-relative pb-2">
-                    <form class="pt-5 position-absolute form-footer">
-                        <div class="input-group pt-4">
-                            <input type="email" name="EMAIL" placeholder="Your email ..." required="">
-                            <span class="input-group-append">
+                <div class="col-md-6 pb-2">
+                    <form class="pt-5">
+                        <div class="input-group-custom pt-4">
+                            <input type="email" name="EMAIL" placeholder="Your email ..." required="" class="mb-3 mb-md-0 input-footer-custom">
                                 <span class="lte-btn-footer"><button class="btn-main color-hover-gray" type="submit">Subscribe</button></span>
-                            </span>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="widget_lte pt-2">
-                <a href="#" class="text-center d-block pt-5">
+            <div class="widget_lte pt-2 pt-md-5">
+                <a href="#" class="text-center d-block pt-0 pt-md-5">
                     <img src="img/logo_1x_white.png" class="img-fluid">
                 </a>
                 
             </div>
-            <div class="lte_icons-2 pt-5 py-5">
-                <ul class="lte-social-icons-list d-flex flex-wrap align-items-center justify-content-center pt-5">
+            <div class="lte_icons-2 pt-2 pt-md-5">
+                <ul class="lte-social-icons-list d-flex flex-wrap align-items-center justify-content-center pt-2 pt-md-5">
                     <li class="first-child">
                         <a href="#" class="text-white te-txt text-center lte-txt">
                             <i class="fa-solid fa-phone d-block py-3 fs-5"></i>
