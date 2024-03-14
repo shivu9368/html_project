@@ -89,13 +89,14 @@ section{
 /*-- ----section banner hero start---- --*/
 .banner-hero {
     height:100vh;
-    background-image:url(img/SLIDE_02.jpeg);
-    margin-top:-110px;
+    /* background-image:url(img/SLIDE_02.jpeg); */
+    margin-top:-190px;
 }
 .design{
     position: absolute;
     z-index:1;
     top: 30%;
+    left: 8%;
 }
 .design-custom{
     padding:130px 0;
@@ -139,6 +140,7 @@ section{
 /*-- ----section transfer start ---- --*/
 .transfer{
     background-color: #192026;
+    padding:120px 0 90px;
 }
 .img-radius{
     width: 100%;
