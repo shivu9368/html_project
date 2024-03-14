@@ -747,6 +747,70 @@ section{
    background-image: url('img/x.png')!important;
    background-size:35px;
    }
+   
+   /* ////contact-page styling//// */
+   .banner-hero-custom{
+    height: calc(100vh - 320px);
+    background-image:url('img/inner_HEADER.jpeg');
+    background-attachment: fixed;
+    background-position: 50% 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top:-110px;
+}
+.design-custom-contact{
+margin: 130px 0 20px;
+position: relative;
+z-index:1;
+}
+
+.design-custom-contact h3{
+ font-size: 48px;
+ font-weight: 700;
+letter-spacing: 1px;
+}
+.banner-hero-custom .breadcrumb-custom ol{
+position: relative;
+z-index:1;
+}
+.banner-hero-custom .breadcrumb-custom ol li a{
+text-decoration: none;
+}
+.contact-page .located-span{
+   color: #192026;
+   font-weight: 700;
+   font-size: 20px;
+}
+.nicolas{
+font-size:16px;
+font-weight: 400;
+font-family: 'mulishregular';
+padding: 20px 30px 0;
+}
+.nicolas-custom{
+font-size:16px;
+font-weight: 400;
+font-family: 'mulishregular';
+}
+.wpcf7-form-control{
+width:100%;
+padding: 20px;
+border: 1px solid #ced4da;
+}
+.lte-social-icons-list li {
+    border-right: 1px dashed rgba(0, 0, 0, 0.25);
+}
+.icon-located-custom li:nth-child(2){
+    margin-left:0;
+}
+.contact .lte-social-icons-list li{
+    padding: 12px 35px 12px 35px!important;
+}
+.contact .lte-social-icons-list .border-custom-contact{
+    border-right: none;
+}
+
+
 
 
 @media screen and (max-width: 767px) {
