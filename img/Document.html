@@ -1,16 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/fontawesome.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Document_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Document_files/stylesheet.css">
+    <link rel="stylesheet" href="./Document_files/fontawesome.css">
+    <link rel="stylesheet" href="./Document_files/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Document_files/owl.theme.default.min.css">
+   <link rel="stylesheet" href="./Document_files/animate.min.css">
+    <link rel="stylesheet" href="./Document_files/style.css">
     <title>Document</title>
+    <style>
+         #owl-demo .item{
+            position: relative;
+            transition: all ease 0.2s;
+       }
+       #owl-demo .item::before{
+        content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #192026;
+    opacity: 0.75;
+    z-index: 1;
+   
+       }
+       .owl-theme .owl-dots .owl-dot{
+        display: block;
+        margin-top:30px;
+       }
+       .owl-dots{
+        position: absolute;
+        top: 30%;
+        right:8%;
+        display: flex;
+        flex-direction: column;
+
+       }
+      .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+        background-color:#fff;
+       }
+
+    .owl-theme .owl-dots .owl-dot.active span:before{
+    content: "";
+    position: absolute;
+    border: 1px solid #d5b55d;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    transform: translate(-50%, -24%);
+}
+/*
+ .animated  {
+      -webkit-animation-duration : 0 ms  !important;
+      animation-duration : 0 ms  !important;
+      -webkit-animation-fill-mode : both  !important;
+      animation-fill-mode : both  !important;
+    }  
+    
+    
+    .fadeOut  {
+      -webkit-animation-name : fadeOut  ;
+      animation-name : fadeOut  ;
+    }  
+    @-webkit-keyframes  fadeOut  {
+      0% {
+        opacity :0;
+      }  
+      100% {
+        opacity :0;
+      }  
+    }
+    @keyframes  fadeOut  {
+      0% {
+        opacity :0;
+      }  
+      100% {
+        opacity :0;
+      }  
+    } */
+    /* body {
+     font-family: Poppins, sans-serif;
+}
+ .hero_carosel .owl-nav button.owl-prev,.hero_carosel .owl-nav button.owl-next{
+     position: absolute;
+     bottom: 50%;
+     right: 50%;
+     color: #000;
+}
+ /* .hero_carosel .owl-nav button.owl-prev{
+     left: 0 
+}
+ .hero_carosel .owl-nav button.owl-next{
+     right: 0 
+}
+ .hero_carosel.owl-carousel.owl-theme .owl-nav [class*='owl-'] {
+     color: #444;
+     font-size: 14px;
+     margin: 5px;
+     padding: 4px 7px;
+     background: #fff;
+     display: inline-block;
+     cursor: pointer;
+     border-radius: 3px;
+}
+ .hero_carosel.owl-carousel.owl-theme.owl-loaded a {
+     text-decoration: none;
+}
+ .hero_carosel i.owl-direction {
+     margin: 0 13px;
+     font-size: 3em;
+     padding: 0;
+     color: #607D8B;
+}
+ .hero_carosel .owl-nav button.owl-next, .hero_carosel .owl-nav button.owl-prev {
+     outline: 0;
+     background: #FFF;
+     width: 36px;
+}
+ .tag{
+     display: inline-block;
+} */
+ @keyframes fadeInUp{
+    0%{
+        opacity:0;
+        transform:translate3d(0,100%,0)
+    }
+    to{
+        opacity:1;
+        transform:translateZ(0)
+    }
+}
+.fadeInUp{
+    animation-name:fadeInUp
+}
+ .desc {
+     position: absolute;
+     padding: 8%;
+     z-index: 9;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     color:#fff;
+}
+ /* .hero-img{
+     position: relative;
+}
+ .hero-img:before {
+     background: rgba(0, 0, 0, 0.38);
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+} */
+ /* .btn-gradient-bg {
+     color: #fff;
+     display: inline-block;
+     padding: 11px 33px;
+     background: linear-gradient(to right, #f05874 0%, #fc6a2a 100%);
+     border-radius: 30px;
+}
+ .delay-1 {
+     animation-delay: .2s;
+}
+ .delay-2 {
+     animation-delay: .4s;
+}
+ .delay-3 {
+     animation-delay: .6s;
+}
+ .delay-4 {
+     animation-delay: .8s;
+}
+ .slider-counter {
+     z-index: 99;
+     bottom: 1%;
+     position: absolute;
+     text-align: center;
+     right: 4%;
+     font-size: 120px;
+     color:rgba(242, 242, 242, 0.7);
+     font-weight: 700;
+}
+ @media (max-width: 767px){
+     .slider-counter {
+         font-size: 80px;
+         font-weight: 600;
+         bottom: 0 
+    }
+}
+ @media (max-width: 576px){
+     .slider-counter {
+         font-size: 30px;
+         font-weight: 500;
+         bottom: 0 
+    }
+}
+/*Credit*/
+ /* .credit-footer a {
+     text-decoration: none;
+     color: #E91E63;
+}
+ .credit-footer {
+     margin-top: 100px;
+     color: #646464;
+     font: 500 12px/22px "Roboto",Arial,sans-serif;
+     letter-spacing: -0.25px;
+     text-align: center;
+}
+ .credit-footer-nav{
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-pack: center;
+     justify-content: center;
+     margin: 20px 0 0;
+     text-align: center;
+}
+ .credit-footer-nav li{
+     display: -ms-inline-flexbox;
+     display: inline-flex;
+     margin: 0;
+     color: #aaa;
+}
+ .credit-footer-nav li a {
+     display: block;
+     color: #424242;
+     font-weight: 400;
+     transition: all .3s ease;
+     text-decoration: none;
+}
+ .credit-footer-nav li:not(:last-child):after {
+     content: "/";
+     margin-right: 6px;
+     margin-left: 6px;
+}
+ .credit-footer-wrap {
+     padding-bottom: 4%;
+} */
+
+    </style>
 </head>
 <body>
    <!-- -----header start----- -->
@@ -19,36 +252,36 @@
         <div class="container py-2 container-custom">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid navbar-brand-custom pb-3">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/logo_1x_white.png" class="img-fluid">
+                    <a class="navbar-brand" href="http://127.0.0.1:5500/index.html#">
+                        <img src="./Document_files/logo_1x_white.png" class="img-fluid">
                     </a>
-                  <button class="btn btn-primary d-xl-none d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span class="navbar-toggler-icon"></span></button>
+                  <button class="btn btn-primary d-md-none d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span class="navbar-toggler-icon"></span></button>
                   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
-                      <a href="#" id="offcanvasRightLabel" class="my-0 mx-auto">
-                        <img src="img/logo_1x_white.png" class="img-fluid">
+                      <a href="http://127.0.0.1:5500/index.html#" id="offcanvasRightLabel" class="my-0 mx-auto">
+                        <img src="./Document_files/logo_1x_white.png" class="img-fluid">
                       </a>
                       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
                     </div>
                     <div class="offcanvas-body">
                       <ul class="">
                         <li class="position-relative mobile-navigation py-2">
-                            <a href="index.html" class="fs-2">
+                            <a href="http://127.0.0.1:5500/index.html" class="fs-2">
                                 Home
                             </a>
                         </li>
                         <li class="position-relative mobile-navigation py-2">
-                            <a href="#" class="fs-2">
+                            <a href="http://127.0.0.1:5500/index.html#" class="fs-2">
                                 About Us
                             </a>
                         </li>
                         <li class="position-relative mobile-navigation py-2">
-                            <a href="#" class="fs-2">
+                            <a href="http://127.0.0.1:5500/index.html#" class="fs-2">
                                 Product
                             </a>
                         </li>
                         <li class="position-relative mobile-navigation py-2">
-                            <a href="contact.html" class="fs-2">
+                            <a href="http://127.0.0.1:5500/contact.html" class="fs-2">
                                 Contact
                             </a>
                         </li>
@@ -58,7 +291,7 @@
                     <div class="collapse navbar-collapse justify-content-around ms-4" id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item ps-3 dropdown-header-hover">
-                            <a class="nav-link active fw-bold" aria-current="page" href="index.html">HOME<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></a>
+                            <a class="nav-link active fw-bold" aria-current="page" href="http://127.0.0.1:5500/index.html">HOME<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg></a>
                             <ul class="dropdown-header">
                                 <li>Limousine</li>
                                 <li>Rental Service</li>
@@ -67,7 +300,7 @@
                             </ul>
                             </li>
                             <li class="nav-item ps-3 dropdown-header-hover">
-                            <a class="nav-link fw-bold" aria-current="page" href="#">ABOUT<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></a>
+                            <a class="nav-link fw-bold" aria-current="page" href="http://127.0.0.1:5500/index.html#">ABOUT<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg></a>
                             <ul class="dropdown-header">
                                 <li>Testmonials</li>
                                 <li>Faq</li>
@@ -76,7 +309,7 @@
                             </ul>
                             </li>
                             <li class="nav-item ps-3 dropdown-header-hover">
-                            <a class="nav-link" aria-current="page" href="#">PRODUCT<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></a>
+                            <a class="nav-link" aria-current="page" href="http://127.0.0.1:5500/index.html#">PRODUCT<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg></a>
                             <ul class="dropdown-header">
                                 <li>Shop</li>
                                 <li>Cart</li>
@@ -85,10 +318,10 @@
                             </ul>
                             </li>
                             <li class="nav-item ps-3 fw-bold">
-                            <a class="nav-link" aria-current="page" href="#">BLOG<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></a>
+                            <a class="nav-link" aria-current="page" href="http://127.0.0.1:5500/index.html#">BLOG<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg></a>
                             </li>
                             <li class="nav-item ps-3 fw-bold">
-                            <a class="nav-link" aria-current="page" href="contact.html">CONTACT</a>
+                            <a class="nav-link" aria-current="page" href="http://127.0.0.1:5500/contact.html">CONTACT</a>
                             </li>
                         </ul>
                         <div class="align-items-center header-lte-icon d-none d-md-flex">
@@ -110,54 +343,101 @@
     
       <!-- -----header end----- -->
       <!-- ----section banner hero start---- -->
-      <section class="bannerhero">
-        <div id="owl-demo" class="owl-carousel owl-theme hero_carosel">
-            <div class="item">
-                <img src="img/SLIDE_02.jpeg">
-            </div>
-            <div class="item">
-                <img src="img/SLIDE_03.jpeg">
-            </div>
-            <div class="item">
-                <img src="img/SLIDE_05.jpeg">
-            </div>
-            <div class="item">
-                <img src="img/SLIDE_02.jpeg">
+    <section class="banner-hero position-relative">
+        <div class="container container-custom ">
+            <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">Design<br><span>With Technology</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic">a limousion for everyone</span>
+                </div>
+                <div class="dots-container d-flex d-md-block py-4 py-md-0">
+                    <div class="dot mb-5 me-5 me-md-0"></div>
+                    <div class="dot mb-5 me-5 me-md-0"></div>
+                    <div class="dot mb-5 me-5 me-md-0"></div>
+                    <div class="dot mb-5 me-5 me-md-0"></div>
+                </div>
             </div>
         </div>
-      </section>
-     <!-- ----section banner hero end---- -->
+    </section>
+    <!-- <section class="banner-hero">
+    <div id="owl-demo" class="owl-carousel owl-theme hero_carosel">
+        <div class="item">
+            <div class="vh">
+                <img src="img/SLIDE_02.jpeg">
+                <div class="design d-block align-items-center d-md-flex container">
+                <div class="design-heading">
+                    <h1 class="mb-2">Design<br><span>With Technology</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="vh">
+                <img src="img/SLIDE_03.jpeg">
+                <div class="design d-block align-items-center d-md-flex container">
+                <div class="design-heading">
+                    <h1 class="mb-2">Limousine<br><span>Vip Transfers</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="vh">
+                <img src="img/SLIDE_05.jpeg">
+               <div class="design d-block align-items-center d-md-flex container">
+                <div class="design-heading">
+                    <h1 class="mb-2">Limousine<br><span>Enjoy the ride</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+              </div>
+             </div>
+        </div>
+        <div class="item">
+            <div class="vh">
+                <img src="img/SLIDE_03.jpeg">
+               <div class="design d-block align-items-center d-md-flex container">
+                <div class="design-heading">
+                    <h1 class="mb-2">limousine<br><span>Travell well</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+              </div>
+             </div>
+        </div>
+      </div>
+    </section> -->
 </div>
-    
+     <!-- ----section banner hero end---- -->
 
       <!-- ----section transfer start---- -->
     <section class="transfer">
        <div class="container container-custom">
             <div class="row">
-                <div class="col-12 col-xl-4 mb-4 mb-xl-0">
-                    <div class="img-radius d-block align-items-center d-xl-flex text-xl-start text-center mb-5 mb-xl-0">
-                        <img src="img/serv_01-110x110.jpeg" class="img-fluid">
-                        <div class="airpot ms-0 my-4 ms-xl-5 my-xl-0">
-                            <h4 class="my-1 my-xl-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
-                            <p class="my-2 my-xl-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
+                <div class="col-md-6 col-12 col-xl-4 mb-4 mb-md-0">
+                    <div class="img-radius d-block align-items-center d-md-flex text-md-start text-center mb-5 mb-md-0">
+                        <img src="./Document_files/serv_01-110x110.jpeg" class="img-fluid">
+                        <div class="airpot ms-0 my-4 ms-md-5 my-md-0">
+                            <h4 class="my-1 my-md-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
+                            <p class="my-2 my-md-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
                        </div>
                     </div> 
                 </div>
-                <div class="col-xl-4 col-12 mb-4 mb-xl-0">
-                    <div class="img-radius d-block align-items-center d-xl-flex text-xl-start text-center mb-5 mb-xl-0">
-                        <img src="img/serv_01-110x110.jpeg" class="img-fluid">
-                        <div class="airpot ms-0 my-4 ms-xl-5 my-xl-0">
-                            <h4 class="my-1 my-xl-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
-                            <p class="my-2 my-xl-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
+                <div class="col-md-6 col-12 col-xl-4 mb-4 mb-md-0">
+                    <div class="img-radius d-block align-items-center d-md-flex text-md-start text-center mb-5 mb-md-0">
+                        <img src="./Document_files/serv_01-110x110.jpeg" class="img-fluid">
+                        <div class="airpot ms-0 my-4 ms-md-5 my-md-0">
+                            <h4 class="my-1 my-md-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
+                            <p class="my-2 my-md-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
                        </div>
                     </div> 
                 </div>
-                <div class="col-xl-4 col-12 mb-4 mb-xl-0">
-                    <div class="img-radius d-block align-items-center d-xl-flex text-xl-start text-center mb-5 mb-xl-0">
-                        <img src="img/serv_01-110x110.jpeg" class="img-fluid">
-                        <div class="airpot ms-0 my-4 ms-xl-5 my-xl-0">
-                            <h4 class="my-1 my-xl-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
-                            <p class="my-2 my-xl-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
+                <div class="col-md-6 col-12 col-xl-4 mb-4 mb-md-0">
+                    <div class="img-radius d-block align-items-center d-md-flex text-md-start text-center mb-5 mb-md-0">
+                        <img src="./Document_files/serv_01-110x110.jpeg" class="img-fluid">
+                        <div class="airpot ms-0 my-4 ms-md-5 my-md-0">
+                            <h4 class="my-1 my-md-0">Airport<br> Transfers<i class="fa-solid fa-arrow-right ms-3"></i></h4>
+                            <p class="my-2 my-md-0">Pellentesque semper dui eget fermentum sagittis. Cur abitur bibe ndum id ante.</p>
                        </div>
                     </div> 
                 </div>
@@ -171,15 +451,15 @@
         <div class="container container-custom">
             <div class="background-img">
                 <div class="row">
-                    <div class="col-xl-4 col-12">
-                        <h3 class="lte-header text-center text-xl-start"><span> Luxury Cars </span><br>
+                    <div class="col-md-4">
+                        <h3 class="lte-header text-center text-md-start"><span> Luxury Cars </span><br>
                             for Maximum<br>Satisfaction
                         </h3>
-                        <p class="text-center text-xl-start">Nullam sed ultricies erat, nec euismod metus. Morbi porttitor sapien vitae leo scelerisque. Nullam sed ultricies erat.</p>
+                        <p class="text-center text-md-start">Nullam sed ultricies erat, nec euismod metus. Morbi porttitor sapien vitae leo scelerisque. Nullam sed ultricies erat.</p>
                         <button class="btn-custom-btn mt-5 luxery-btn">Read More</button>
                     </div>
-                    <div class="col-xl-8 col-12 d-xl-block d-none">
-                        <img src="img/about-limmo.png" class="img-fluid">
+                    <div class="col-md-8 d-md-block d-none">
+                        <img src="./Document_files/about-limmo.png" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -193,8 +473,8 @@
             <div class="row">
                 <div class="col-md-6 col-12 col-xl-4">
                     <div class="lte-btn-wrap">
-                        <a href="#">
-                            <img src="img/car_01-800x532.jpeg" class="img-fluid">
+                        <a href="http://127.0.0.1:5500/index.html#">
+                            <img src="./Document_files/car_01-800x532.jpeg" class="img-fluid">
                         </a>
                         <div class="lte-layout-car">
                             <h5 class="lte-header"> Cadillac Limousine XTS </h5>
@@ -214,17 +494,17 @@
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i><span>
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
-                            </div>
+                            </span></span></div>
                         </div>
-                        <a href="#" class="btn-custom-btn">
+                        <a href="http://127.0.0.1:5500/index.html#" class="btn-custom-btn">
                             <span class="text">Get Limousine <i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-6 col-12 col-xl-4">
                     <div class="lte-btn-wrap">
-                        <a href="#">
-                            <img src="img/car_02-800x532.jpeg" class="img-fluid">
+                        <a href="http://127.0.0.1:5500/index.html#">
+                            <img src="./Document_files/car_02-800x532.jpeg" class="img-fluid">
                         </a>
                         <h5 class="lte-header"> Mercedes Benz E-Class </h5>
                         <p class="lte-excerpt  mt-2 mt-md-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
@@ -242,17 +522,17 @@
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i><span>
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
-                            </div>
+                            </span></span></div>
                         </div>
-                        <a href="#" class="btn-custom-btn">
+                        <a href="http://127.0.0.1:5500/index.html#" class="btn-custom-btn">
                             <span class="text">Get Limousine <i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 col-xl-4 mt-xl-0 mt-4 mx-xl-0 mx-auto">
+                <div class="col-md-6 col-12 col-xl-4">
                     <div class="lte-btn-wrap">
-                        <a href="#">
-                            <img src="img/car_01-800x532.jpeg" class="img-fluid">
+                        <a href="http://127.0.0.1:5500/index.html#">
+                            <img src="./Document_files/car_01-800x532.jpeg" class="img-fluid">
                         </a>
                         <h5 class="lte-header"> Range Rover Sport 5.5 </h5>
                         <p class="lte-excerpt  mt-2 mt-md-3">Insured, leather interior, air conditioning, rain sensor, panoramic roof</p>
@@ -270,15 +550,15 @@
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i><span>
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
                                 <span class="lte-stars"><i class="fa-solid fa-star"></i></span>
-                            </div>
+                            </span></span></div>
                         </div>
-                        <a href="#" class="btn-custom-btn">
+                        <a href="http://127.0.0.1:5500/index.html#" class="btn-custom-btn">
                             <span class="text">Get Limousine <i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                         </a>
                 </div>
             </div>
         </div>
-     </section>
+     </div></section>
      <!-- ----section cart model end---- -->
      <!-- ----section Incredible comfort start---- -->
      <section class="Incredible">
@@ -287,7 +567,7 @@
                 <h5 class="text-center lte-header pt-5 pb-3">We value the time and quality of travel for each of our clients</h5>
                 <h2 class="text-center lte-heading-content py-3 mt-1 mb-5">Incredible <span class="d-block">comfort</span></h2>
                 <div class="img-car position-relative">
-                    <img class="img-fluid" src="img/about-limmo-large.png">
+                    <img class="img-fluid" src="./Document_files/about-limmo-large.png">
                 </div>
             </div>
         </div>
@@ -301,48 +581,48 @@
      <section class="transfersheet position-relative">
       <div class="container container-custom">
         <div class="row">
-            <div class="col-xl-6 d-xl-block d-none">
+            <div class="col-md-6 d-md-block d-none">
                 <div class="transfersheet-content">
-                   <img src="img/about-chairs.png" class="img-fluid">
+                   <img src="./Document_files/about-chairs.png" class="img-fluid">
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-md-6">
                 <div class="lte-custom">
-                    <div class="lte-subcolor-main ms-0 ms-xl-4 text-xl-start text-center">
+                    <div class="lte-subcolor-main ms-0 ms-md-4 text-md-start text-center">
                         <h5>We make sure that <span>your every trip</span> is comfortable</h5>
                     </div>
                     <div class="row lte-re">
-                        <div class="col-xl-4 col-6">
+                        <div class="col-md-4 col-6">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">Luxury Limousine Selection</span>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-6">
+                        <div class="col-md-4 col-6">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">27/7 Order Available</span>
                             </div>
                         </div>
-                        <div class="col-xl-4 lte-wrap col-6 mt-4 mt-x;-0">
+                        <div class="col-md-4 lte-wrap col-6 mt-4 mt-md-0">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">Fast Car Delivery Service</span>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-6 custom-margin">
+                        <div class="col-md-4 col-6 custom-margin">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">High Safety and Nurity</span>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-6  custom-margin">
+                        <div class="col-md-4 col-6  custom-margin">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
-                                <span class="d-block text-white text-center">Fixed Price & Bonus System</span>
+                                <span class="d-block text-white text-center">Fixed Price &amp; Bonus System</span>
                             </div>
                         </div>
-                        <div class="col-xl-4 lte-wrap col-6 custom-margin">
+                        <div class="col-md-4 lte-wrap col-6 custom-margin">
                             <div class="lte-wrapper">
                                 <i class="fa-solid fa-car fs-2 d-block text-center"></i>
                                 <span class="d-block text-white text-center">Professional Car Drivers</span>
@@ -353,10 +633,10 @@
             </div>
         </div>
       </div>
-     </section>
+     </div></div></section>
      <!-- ----section carsheet demo end---- -->
     <!-- ----section cbooking form start---- -->
-     <section class="booking-form">
+     <section class="booking form">
         <div class="container-custom container">
             <div class="row">
                 <div class="col-md-6">
@@ -375,10 +655,10 @@
                         <h6 class="lte-header pt-5 pb-1 text-center text-md-start">Download our Appllication to track your order</h6>
                         <div class="lte-heder-custom d-flex align-items-center pt-2 pb-3">
                             <div class="eleme-image">
-                                <img src="img/app-apple-2x.png">
+                                <img src="./Document_files/app-apple-2x.png">
                             </div>
                             <div class="eleme-image ms-5 ms-md-3">
-                                <img src="img/app-google-2x.png">
+                                <img src="./Document_files/app-google-2x.png">
                             </div>
                         </div>
                     </div>
@@ -427,7 +707,7 @@
                                      </label>
                                 </div>
                                 <div class="col-12 hover-clases">
-                                    <a href="#" class="get-limiousion-hover">Get Limousion</a>
+                                    <a href="http://127.0.0.1:5500/index.html#" class="get-limiousion-hover">Get Limousion</a>
                                 </div>
                             </div>
                         </form>
@@ -443,7 +723,7 @@
                 <h2 class="lte-header text-center position-relative"><span> To the airport </span><br>
                     with maximum comfort</h2>
                 <p class="pt-5 text-center text-white fs-4 position-relative">We value the time and quality of travel for each of our clients</p>
-                <a href="#" class="read-more"><span>Read More</span><i class="fa-solid fa-arrow-right lte-icons-tags ms-2"></i></a>
+                <a href="http://127.0.0.1:5500/index.html#" class="read-more"><span>Read More</span><i class="fa-solid fa-arrow-right lte-icons-tags ms-2"></i></a>
             </div>
           </section>
       <!-- ----section maximum comfort end---- -->
@@ -463,7 +743,7 @@
                 </div>
                 <div class="col-md-6 position-relative d-md-block d-none">
                     <div class="img-dicount position-absolute ">
-                        <img src="img/discount-card.png">
+                        <img src="./Document_files/discount-card.png">
                     </div>
                 </div>
             </div>
@@ -482,8 +762,8 @@
                 <div class="row">
                     <div class="col-md-4 col-12 ">
                         <div class="inner-wrap overflow-hidden blog-post-container">
-                            <a href="#" class="position-relative blog-img-container ">
-                                <img src="img/blog_01-790x505.jpeg" class="img-fluid blog-custom-img">
+                            <a href="http://127.0.0.1:5500/index.html#" class="position-relative blog-img-container ">
+                                <img src="./Document_files/blog_01-790x505.jpeg" class="img-fluid blog-custom-img">
                                 <div class="position-absolute date-container text-center">
                                     <p class="date mb-0 fw-medium">12</p>
                                     <p class="mb-0 fw-medium">May, 20</p>
@@ -493,12 +773,12 @@
                         <div class="pt-3">
                             <ul class="d-flex list-unstyled">
                                 <li class="detail-wrapper service-wrapper">
-                                    <a href="#" class="text-decoration-none other-details">Service</a>
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">Service</a>
                                 </li>
                                 <li class="detail-wrapper">
                                 <span class="d-flex align-items-center comment-wrapper position-relative ps-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
                                       </svg>
                                     1
                                 </span>
@@ -506,14 +786,14 @@
                                 <li class="detail-wrapper">
                                     <span class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"></path>
                                           </svg>
                                           1
                                     </span>
                                 </li>
                             </ul>
-                            <a href="#" class="text-decoration-none">
+                            <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none">
                                 <h3 class="fs-4 blog-card-heading">London Airport launches additional flights to Madrid</h3>
                             </a>
                             <p class="fs-6 blog-card-description">The price of tickets for low-cost airlines for a specific route has a much larger spread …</p>
@@ -521,8 +801,8 @@
                     </div>
                     <div class="col-md-4 col-12 ">
                         <div class="inner-wrap overflow-hidden blog-post-container">
-                         <a href="#" class="position-relative blog-img-container ">
-                             <img src="img/blog_02-790x505.jpeg" class="img-fluid blog-custom-img">
+                         <a href="http://127.0.0.1:5500/index.html#" class="position-relative blog-img-container ">
+                             <img src="./Document_files/blog_02-790x505.jpeg" class="img-fluid blog-custom-img">
                              <div class="position-absolute date-container text-center">
                                  <p class="date mb-0 fw-medium">12</p>
                                  <p class="mb-0 fw-medium">May, 20</p>
@@ -532,12 +812,12 @@
                         <div class="pt-3">
                             <ul class="d-flex list-unstyled">
                                 <li class="detail-wrapper service-wrapper">
-                                    <a href="#" class="text-decoration-none other-details">Service</a>
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">Service</a>
                                 </li>
                                 <li class="detail-wrapper">
                                 <span class="d-flex align-items-center comment-wrapper position-relative ps-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
                                       </svg>
                                     1
                                 </span>
@@ -545,14 +825,14 @@
                                 <li class="detail-wrapper">
                                     <span class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"></path>
                                           </svg>
                                           1
                                     </span>
                                 </li>
                             </ul>
-                            <a href="#" class="text-decoration-none">
+                            <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none">
                                 <h3 class="fs-4 blog-card-heading">Egypt stuck more than 150 tourists from the Netherlands</h3>
                             </a>
                             <p class="fs-6 blog-card-description">The price of tickets for low-cost airlines for a specific route has a much larger spread …</p>
@@ -562,16 +842,16 @@
                         <div>
                             <ul class="d-flex list-unstyled">
                                 <li class="detail-wrapper service-wrapper article-wrapper">
-                                    <a href="#" class="text-decoration-none other-details">
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">
                                         <span>12 May, 2020</span></a>
                                 </li>
                                 <li class="detail-wrapper service-wrapper comment-wrapper position-relative ps-2">
-                                    <a href="#" class="text-decoration-none other-details">Service</a>
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">Service</a>
                                 </li>
                                 <li class="detail-wrapper">
                                 <span class="d-flex align-items-center comment-wrapper position-relative ps-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
                                       </svg>
                                     1
                                 </span>
@@ -579,14 +859,14 @@
                                 <li class="detail-wrapper">
                                     <span class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"></path>
                                           </svg>
                                           1
                                     </span>
                                 </li>
                             </ul>
-                            <a href="#" class="text-decoration-none">
+                            <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none">
                                 <h3 class="fs-4 blog-card-heading">Turkish Airlines will increase the number of flights between Istanbul and Barcelona</h3>
                             </a>
                             <p class="fs-6 blog-card-description">The price of tickets for low-cost airlines for a specific route has a much larger spread …</p>
@@ -594,16 +874,16 @@
                         <div class="article-content-wrapper">
                             <ul class="d-flex list-unstyled">
                                 <li class="detail-wrapper service-wrapper article-wrapper">
-                                    <a href="#" class="text-decoration-none other-details">
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">
                                         <span>12 May, 2020</span></a>
                                 </li>
                                 <li class="detail-wrapper service-wrapper comment-wrapper position-relative ps-2">
-                                    <a href="#" class="text-decoration-none other-details">Taxi driver</a>
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">Taxi driver</a>
                                 </li>
                                 <li class="detail-wrapper">
                                 <span class="d-flex align-items-center comment-wrapper position-relative ps-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
                                       </svg>
                                     0
                                 </span>
@@ -611,14 +891,14 @@
                                 <li class="detail-wrapper">
                                     <span class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"></path>
                                           </svg>
                                           1
                                     </span>
                                 </li>
                             </ul>
-                            <a href="#" class="text-decoration-none">
+                            <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none">
                                 <h3 class="fs-4 blog-card-heading">Irish low-cost airline announced regular flights to the Emirates</h3>
                             </a>
                             <p class="fs-6 blog-card-description">The price of tickets for low-cost airlines for a specific route has a much larger spread …</p>
@@ -626,16 +906,16 @@
                         <div>
                             <ul class="d-flex list-unstyled">
                                 <li class="detail-wrapper service-wrapper article-wrapper">
-                                    <a href="#" class="text-decoration-none other-details">
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">
                                         <span>9 Dec, 2019</span></a>
                                 </li>
                                 <li class="detail-wrapper service-wrapper comment-wrapper position-relative ps-2">
-                                    <a href="#" class="text-decoration-none other-details">Booking</a>
+                                    <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none other-details">Booking</a>
                                 </li>
                                 <li class="detail-wrapper">
                                 <span class="d-flex align-items-center comment-wrapper position-relative ps-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
                                       </svg>
                                     1
                                 </span>
@@ -643,14 +923,14 @@
                                 <li class="detail-wrapper">
                                     <span class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#d7b65d" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"></path>
                                           </svg>
                                           1
                                     </span>
                                 </li>
                             </ul>
-                            <a href="#" class="text-decoration-none">
+                            <a href="http://127.0.0.1:5500/index.html#" class="text-decoration-none">
                                 <h3 class="fs-4 blog-card-heading">Top 5 countries most Americans fly to: Limme rating</h3>
                             </a>
                             <p class="fs-6 blog-card-description">The price of tickets for low-cost airlines for a specific route has a much larger spread …</p>
@@ -659,7 +939,7 @@
                 </div>
             <div class="text-center">
 
-                   <a href="#" class="btn-custom-btn blog-btn">
+                   <a href="http://127.0.0.1:5500/index.html#" class="btn-custom-btn blog-btn">
                             <span class="text">Read More<i class="fa-solid fa-arrow-right ms-3 vertically-middle"></i></span>
                      </a>
             </div>
@@ -672,32 +952,32 @@
             <div class="row">
                 <div class="col-md-2 col-6">
                     <div class="img-gray my-3 mx-auto">
-                        <img src="img/logo_01.png" class="img-fluid">
+                        <img src="./Document_files/logo_01.png" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-2 col-6">
                     <div class="img-gray my-3 mx-auto">
-                        <img src="img/logo_02-1.png" class="img-fluid">
+                        <img src="./Document_files/logo_02-1.png" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-2 col-6">
                     <div class="img-gray my-3 mx-auto">
-                        <img src="img/logo_03.png" class="img-fluid">
+                        <img src="./Document_files/logo_03.png" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-2 col-6">
                     <div class="img-gray my-3 mx-auto">
-                        <img src="img/logo_04.png" class="img-fluid">
+                        <img src="./Document_files/logo_04.png" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-2 col-6">
                     <div class="img-gray my-3 mx-auto">
-                        <img src="img/logo_05.png" class="img-fluid">
+                        <img src="./Document_files/logo_05.png" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-2 col-6">
                     <div class="img-gray my-3 mx-auto">
-                        <img src="img/logo_06.png" class="img-fluid">
+                        <img src="./Document_files/logo_06.png" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -708,52 +988,50 @@
       <footer class="footer position-relative">
         <div class="container">
             <div class="row hr-tag">
-                <div class="col-xl-6 d-flex justify-content-end ps-custom pb-2 d-xl-block d-none">
+                <div class="col-md-6 d-flex justify-content-end ps-custom pb-2 d-md-block d-none">
                     <div class="footer-heading pt-4">
                         <h6 class="lte-header fs-5 pt-5">Want to know about our offers first?</h6>
                         <h4 class="lte-header pb-5 text-white fs-font">Subscribe our newsletter</h4>
                     </div>
                 </div>
-                <div class="col-xl-6 pb-2">
+                <div class="col-md-6 pb-2">
                     <form class="pt-5">
                         <div class="input-group-custom pt-4">
                             <input type="email" name="EMAIL" placeholder="Your email ..." required="" class="mb-3 mb-md-0 input-footer-custom">
-                                <span class="lte-btn-footer mt-3 mt-xl-0">
-                                    <button class="btn-main color-hover-gray" type="submit">Subscribe</button>
-                                </span>
+                                <span class="lte-btn-footer"><button class="btn-main color-hover-gray" type="submit">Subscribe</button></span>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="widget_lte pt-2 pt-md-5">
-                <a href="#" class="text-center d-block pt-0 pt-md-5">
-                    <img src="img/logo_1x_white.png" class="img-fluid">
+                <a href="http://127.0.0.1:5500/index.html#" class="text-center d-block pt-0 pt-md-5">
+                    <img src="./Document_files/logo_1x_white.png" class="img-fluid">
                 </a>
                 
             </div>
             <div class="lte_icons-2 pt-2 pt-md-5">
                 <ul class="lte-social-icons-list d-flex flex-wrap align-items-center justify-content-center pt-2 pt-md-5">
                     <li class="first-child">
-                        <a href="#" class="text-white te-txt text-center lte-txt">
+                        <a href="http://127.0.0.1:5500/index.html#" class="text-white te-txt text-center lte-txt">
                             <i class="fa-solid fa-phone d-block py-3 fs-5"></i>
                             <span class="d-block">0 (550) 680-34-12<br> <strong> Round-the-clock </strong></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-white text-center lte-txt ">
+                        <a href="http://127.0.0.1:5500/index.html#" class="text-white text-center lte-txt ">
                             <i class="fa-solid fa-location-dot d-block py-3 fs-5"></i>
                             <span class="d-block">1353 Locust St, Kansas City,<br> MO 64106</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-white text-center lte-txt ">
+                        <a href="http://127.0.0.1:5500/index.html#" class="text-white text-center lte-txt ">
                             <i class="fa-solid fa-envelope d-block py-3 fs-5"></i>
                             <span class="d-block">info@limme-theme.com<br> <span>@limme-theme.com</span></span>
                            
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-white text-center lte-txt ">
+                        <a href="http://127.0.0.1:5500/index.html#" class="text-white text-center lte-txt ">
                             <i class="fa-solid fa-clock d-block py-3 fs-5"></i>
                             <span class="d-block"><strong> Mo-Sa: </strong> 07:00 - 22:00<br> <span><strong> Su: </strong> 07:00 - 16:00</span></span>
                         </a>
@@ -761,16 +1039,198 @@
                 </ul>
             </div>
             <div class="copyright-layout-default text-center py-3">
-                    <p class="text-white"><a href="#" class="layout-default">Like-themes</a> © All Rights Reserved - 2020 - <a href="#" class="layout-default">Purchase</a></p>
+                    <p class="text-white"><a href="http://127.0.0.1:5500/index.html#" class="layout-default">Like-themes</a> © All Rights Reserved - 2020 - <a href="http://127.0.0.1:5500/index.html#" class="layout-default">Purchase</a></p>
             </div>
         </div>
-    </footer>
-        <!-- ----section footer end---->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      </footer>
+
+      <div id="owl-demo" class="owl-carousel owl-theme hero_carosel owl-loaded">
+        
+        
+        
+        
+      <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1536px, 0px, 0px); transition: all 0s ease 0s; width: 6144px;"><div class="owl-item cloned" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_05.jpeg">
+               <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">Limousine<br><span>Enjoy the ride</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+              </div>
+             </div>
+        </div></div><div class="owl-item cloned" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_03.jpeg">
+               <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">limousine<br><span>Travell well</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+              </div>
+             </div>
+        </div></div><div class="owl-item active" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_02.jpeg">
+                <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2 animated fadeInUp delay-2">Design<br><span>With Technology</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag animated fadeInUp delay-1">a limousion for everyone</span>
+                </div>
+            </div>
+            </div>
+        </div></div><div class="owl-item" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_03.jpeg">
+                <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">Limousine<br><span>Vip Transfers</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+            </div>
+            </div>
+        </div></div><div class="owl-item" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_05.jpeg">
+               <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">Limousine<br><span>Enjoy the ride</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+              </div>
+             </div>
+        </div></div><div class="owl-item" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_03.jpeg">
+               <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">limousine<br><span>Travell well</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+              </div>
+             </div>
+        </div></div><div class="owl-item cloned" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_02.jpeg">
+                <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">Design<br><span>With Technology</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+            </div>
+            </div>
+        </div></div><div class="owl-item cloned" style="width: 768px;"><div class="item">
+            <div class="vh">
+                <img src="./Document_files/SLIDE_03.jpeg">
+                <div class="design d-block align-items-center d-md-flex">
+                <div class="design-heading">
+                    <h1 class="mb-2">Limousine<br><span>Vip Transfers</span></h1>
+                <span class="fs-1 text-white custom-limous d-block text-center text-md-start font-italic tag">a limousion for everyone</span>
+                </div>
+            </div>
+            </div>
+        </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
+
+      <!-- <div class="hero_carosel owl-carousel owl-theme">
+        <div class="item">
+           <div class="hero-img">
+              <img src="img/about-map.png" alt="">  
+           </div>
+           <div class="desc ">
+              <span class="tag " >Welcome</span   >
+              <h2>Photography is on it's way.</h2>
+              <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <p class="carsl_btn"><a href="#" class="btn-gradient-bg">View Galleries </a></p>
+           </div>
+        </div>
+        <div class="item">
+           <div class="hero-img">
+              <img src="img/about-sky.png" alt="">  
+           </div>
+           <div class="desc ">
+              <span class="tag ">Discover</span>
+              <h2 >Discover New Things</h2>
+              <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <p class="carsl_btn"><a href="#" class="btn-gradient-bg">Learn More</a></p>
+           </div>
+        </div>
+        <div class="item">
+           <div class="hero-img">
+              <img src="img/app-google-2x.png" alt="">  
+           </div>
+           <div class="desc ">
+              <span class="tag ">Photography</span>
+              <h2>Capture interesting things.</h2>
+              <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <p class="carsl_btn"><a href="#" class="btn-gradient-bg">View More</a></p>
+           </div>
+        </div>
+        <div class="item">
+           <div class="hero-img">
+              <img src="https://cdn.pixabay.com/photo/2017/11/02/03/35/gothic-2910057__340.jpg" alt="">  
+           </div>
+           <div class="desc">
+              <span class="tag">Work Hard</span>
+              <h2>creative minds</h2>
+              <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <p class="carsl_btn"><a href="#" class="btn-gradient-bg">Learn More</a></p>
+           </div>
+        </div>
+        <div class="item">
+           <div class="hero-img">
+              <img src="https://cdn.pixabay.com/photo/2016/11/29/02/28/attractive-1866858__340.jpg" alt="">  
+           </div>
+           <div class="desc ">
+              <span class="tag">Passion</span>
+              <h2>Multimedia Channel</h2>
+              <p class="carsl_cnt">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <p class="carsl_btn"><a href="#" class="btn-gradient-bg">Learn More</a></p>
+           </div>
+        </div>
+     </div>
+     <div class="slider-counter"></div>
+
+<div class="credit-footer-wrap">
+<div class="credit-footer">
+   Made with <span>&#10084;</span> by <a href="http://sharabindu.com/" target="_blank">Sharabindu</a></div>
+<ul class="credit-footer-nav">
+           <li><a href="https://profiles.wordpress.org/sharabindu/#content-plugins" target="_blank">
+               Free Plugins			</a></li>
+       <li><a href="https://sharabindu.com/about/" target="_blank">About US</a></li>
+       <li><a href="https://sharabindu.com/blog/" target="_blank">Our blog</a></li>
+       <li><a href="https://www.facebook.com/groups/sharabindu" target="_blank">Join Our Community			</a></li>
+       <li><a href="https://sharabindu.com/build-luxury-and-premium-website/" target="_blank">Build A website</a></li>
+   </ul>
+ </div> -->
+      
+      <!-- ----section footer end---->
+    <script src="./Document_files/bootstrap.bundle.min.js"></script>
+    <script src="./Document_files/jquery.min.js"></script>
+<!-- Owl Carousel JavaScript -->
+<script src="./Document_files/owl.carousel.min.js"></script>
 
 <script>
+//     $(document).ready(function(){
+//         function fadeInDownReset() {
+// 		if (!dragging) {
+// 			$(owlElementID + " .caption .fadeInDown-1, " + owlElementID + " .caption .fadeInDown-2, " + owlElementID + " .caption .fadeInDown-3").stop().delay(800).animate({ opacity: 0, top: "-15px" }, { duration: 400, easing: "easeInCubic" });
+// 		}
+// 		else {
+// 			$(owlElementID + " .caption .fadeInDown-1, " + owlElementID + " .caption .fadeInDown-2, " + owlElementID + " .caption .fadeInDown-3").css({ opacity: 0, top: "-15px" });
+// 		}
+// 	}
+
+
+//     $("#owl-demo").owlCarousel({
+//       items: 1,
+//       loop: true,
+//       autoplay:true,
+//       autoplayTimeout: 2000,
+//       autoplayHoverPause: true,
+//       animateOut: 'fadeOut',
+//       animateIn: 'fadeIn' 
+//     });
+//   });
 $(document).ready(function() {
 
 var heroSlider = $('.hero_carosel');
@@ -784,7 +1244,7 @@ heroSlider.on('initialized.owl.carousel changed.owl.carousel', function(e) {
     .owlCarousel({
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
-        autoplay: true,
+        autoplay: false,
         loop: true,
         margin: 0,
         nav: false,
@@ -803,5 +1263,43 @@ $(".hero_carosel").on('change.owl.carousel', function(event) {
 });
 });
 </script>
-</body>
-</html>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
